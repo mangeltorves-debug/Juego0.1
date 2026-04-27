@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Survival Legend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="menu-inicio">
+            <h1>Selecciona tu Héroe</h1>
+            <div id="contenedor-personajes"></div>
+        </div>
+
+        <div id="menu-recompensa" style="display: none;">
+            <h2>¡Horda Superada!</h2>
+            <p>Elige una mejora, mi rey:</p>
+            <div id="opciones-mejora">
+                <button onclick="elegirMejora('daño')">⚔️ +Daño</button>
+                <button onclick="elegirMejora('velocidad')">👟 +Velocidad</button>
+                <button onclick="elegirMejora('hp')">❤️ +Vida Máx</button>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="ui-layer">
+            <div id="stats">
+                Vida: <span id="hp">0</span> | 
+                Monedas: <span id="coins">0</span> | 
+                Ronda: <span id="round">1</span>
+            </div>
+        </div>
+        <div id="menu-tienda" style="display: none;">
+    <h2>Tienda de Objetos</h2>
+    <p>Gasta tus monedas, excelentísimo:</p>
+    <div id="estante-tienda">
+        </div>
+    <button onclick="cerrarTienda()" id="btn-continuar">Continuar a la siguiente horda</button>
+    </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

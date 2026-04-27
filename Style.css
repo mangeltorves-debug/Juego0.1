@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    border: 4px solid #444;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+canvas {
+    background-color: #222;
+    display: block;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+#menu-inicio, #menu-recompensa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+#menu-recompensa { background: rgba(20, 20, 20, 0.8); }
+
+#contenedor-personajes, #opciones-mejora {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tarjeta-heroe, #opciones-mejora button {
+    border: 2px solid #555;
+    padding: 15px;
+    text-align: center;
+    background: #333;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+.tarjeta-heroe:hover, #opciones-mejora button:hover {
+    border-color: #00ffcc;
+    transform: scale(1.05);
+    background: #444;
+}
+
+.bloqueado {
+    opacity: 0.5;
+    filter: grayscale(1);
+    cursor: not-allowed;
+}
+#menu-tienda {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(10, 10, 30, 0.95);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    z-index: 30;
+}
+
+#estante-tienda {
+    display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center;
+}
+
+.item-tienda {
+    background: #2c3e50; border: 2px solid gold; padding: 15px;
+    width: 150px; text-align: center; border-radius: 8px;
+}
+
+.item-tienda button {
+    background: gold; color: black; font-weight: bold;
+    border: none; padding: 5px 10px; cursor: pointer; margin-top: 10px;
+}
+
+.item-tienda button:disabled { background: gray; cursor: not-allowed; }
+
+#btn-continuar {
+    background: #27ae60; color: white; padding: 10px 30px;
+    border: none; border-radius: 5px; cursor: pointer; font-size: 1.1em;
+}
